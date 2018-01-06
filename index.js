@@ -30,7 +30,7 @@ bot.on('message', function onMessage(msg) {
   if (msg.text) {
     const text = normalizeString(msg.text);
 
-    switch (msg.text) {
+    switch (text) {
       case 'данил':
         bot.sendMessage(msg.chat.id, 'Ты налил?');
         break;

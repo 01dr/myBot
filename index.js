@@ -27,33 +27,35 @@ const normalizeString = (string) => string.toLowerCase().trim();
 
 // Just to ping!
 bot.on('message', function onMessage(msg) {
-  const text = normalizeString(msg.text);
+  if (msg.text) {
+    const text = normalizeString(msg.text);
 
-  switch (msg.text) {
-    case 'данил':
-      bot.sendMessage(msg.chat.id, 'Ты налил?');
-      break;
-    case 'здесь так красиво':
-      bot.sendMessage(msg.chat.id, 'Я перестаю дышать');
-      break;
-    case 'звуки на минимум':
-      bot.sendMessage(msg.chat.id, 'Чтобы не мешать');
-      break;
-    case 'все говорят ака':
-      bot.sendMessage(msg.chat.id, 'а как поднять бабла?');
-      break;
-    case 'все говорят рушан':
-      bot.sendMessage(msg.chat.id, 'ты че такой еблан?');
-      break;
-    case 'все говорят михрон':
-      bot.sendMessage(msg.chat.id, 'ты че такой гандон');
-      break;
-    case 'твой флоу бред':
-      bot.sendMessage(msg.chat.id, 'Ты говноед');
-      bot.sendMessage(msg.chat.id, 'РРРРРаунд');
-      break;
-    case 'все говорят айдар':
-      bot.sendMessage(msg.chat.id, `зачем ты ебал ${msg.from.first_name} вчера?`);
-      break;
+    switch (msg.text) {
+      case 'данил':
+        bot.sendMessage(msg.chat.id, 'Ты налил?');
+        break;
+      case 'здесь так красиво':
+        bot.sendMessage(msg.chat.id, 'Я перестаю дышать');
+        break;
+      case 'звуки на минимум':
+        bot.sendMessage(msg.chat.id, 'Чтобы не мешать');
+        break;
+      case 'все говорят ака':
+        bot.sendMessage(msg.chat.id, 'а как поднять бабла?');
+        break;
+      case 'все говорят рушан':
+        bot.sendMessage(msg.chat.id, 'ты че такой еблан?');
+        break;
+      case 'все говорят михрон':
+        bot.sendMessage(msg.chat.id, 'ты че такой гандон');
+        break;
+      case 'твой флоу бред':
+        bot.sendMessage(msg.chat.id, 'Ты говноед');
+        bot.sendMessage(msg.chat.id, 'РРРРРаунд');
+        break;
+      case 'все говорят айдар':
+        bot.sendMessage(msg.chat.id, `зачем ты ебал ${msg.from.first_name} вчера?`);
+        break;
+    }
   }
 });

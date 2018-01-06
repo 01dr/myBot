@@ -28,9 +28,6 @@ const normalizeString = (string) => string.toLowerCase().trim();
 // Just to ping!
 bot.on('message', function onMessage(msg) {
   const text = normalizeString(msg.text);
-  if (msg.text && text === 'данил') {
-    bot.sendMessage(msg.chat.id, 'Ты налил?');
-  }
 
   switch (msg.text) {
     case 'данил':

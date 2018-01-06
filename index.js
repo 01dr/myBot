@@ -52,8 +52,8 @@ bot.on('message', function onMessage(msg) {
       bot.sendMessage(msg.chat.id, 'Ты говноед');
       bot.sendMessage(msg.chat.id, 'РРРРРаунд');
       break;
-    case 'все говорят ака':
-      bot.sendMessage(msg.chat.id, 'а как поднять бабла?');
+    case 'все говорят айдар':
+      bot.sendMessage(msg.chat.id, `зачем ты ебал ${msg.from.first_name} вчера?`);
       break;
   }
 });

@@ -51,7 +51,7 @@ bot.on('message', function onMessage(msg) {
       case '/pidor':
         bot.sendMessage(msg.chat.id, `Опять в свои игрульки играете? Пиздец, вам сколько уже? 24? 25? У нормальных людей уже семья, дети, а вы все генератором псевдорандомных чисел решаете кто из вас пидор в чате, охуеть можно. ${msg.from.first_name}, повзрослей, блядь.`);
       case 'данил':
-        bot.sendMessage(msg.chat.id, items[Math.floor(Math.random() * daneel.length)]);
+        bot.sendMessage(msg.chat.id, daneel[Math.floor(Math.random() * daneel.length)]);
         break;
       case 'здесь так красиво':
         bot.sendMessage(msg.chat.id, 'Я перестаю дышать');
